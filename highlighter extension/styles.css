@@ -1,0 +1,123 @@
+/* Popup Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  width: 250px;
+  background-color: #f4f4f9;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: #333;
+  text-align: center;
+}
+
+h3 {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Highlight Options Styling */
+#colorOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.highlight-option {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease-in-out;
+}
+
+.highlight-option:hover {
+  transform: scale(1.1);
+}
+
+.highlight-option[data-color="yellow"] { background-color: #ffeb3b; color: #333; }
+.highlight-option[data-color="pink"] { background-color: #ff69b4; }
+.highlight-option[data-color="blue"] { background-color: #87cefa; }
+.highlight-option[data-color="green"] { background-color: #90ee90; color: #333; }
+.highlight-option[data-color="orange"] { background-color: #ffa500; }
+.highlight-option[data-color="purple"] { background-color: #800080; }
+
+/* Highlights List Styling */
+#highlightsList {
+  margin-top: 10px;
+}
+
+#highlights {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+#highlights li {
+  padding: 10px;
+  margin-bottom: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#highlights li::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  width: 4px;
+  height: 100%;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
+/* Dynamic Color Styling for Highlights */
+#highlights li[data-color="yellow"] { color: #ffeb3b; border-left: 4px solid #ffeb3b; }
+#highlights li[data-color="pink"] { color: #ff69b4; border-left: 4px solid #ff69b4; }
+#highlights li[data-color="blue"] { color: #87cefa; border-left: 4px solid #87cefa; }
+#highlights li[data-color="green"] { color: #90ee90; border-left: 4px solid #90ee90; }
+#highlights li[data-color="orange"] { color: #ffa500; border-left: 4px solid #ffa500; }
+#highlights li[data-color="purple"] { color: #800080; border-left: 4px solid #800080; }
+
+/* Highlighted Text on Webpage */
+.highlighted-text {
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #333; /* Ensures text readability on light background */
+  display: inline-block;
+}
+
+/* Specific Backgrounds for Highlighted Text on Webpage */
+.highlight-yellow { background-color: rgba(255, 235, 59, 0.4); }
+.highlight-pink { background-color: rgba(255, 105, 180, 0.4); }
+.highlight-blue { background-color: rgba(135, 206, 250, 0.4); }
+.highlight-green { background-color: rgba(144, 238, 144, 0.4); }
+.highlight-orange { background-color: rgba(255, 165, 0, 0.4); }
+.highlight-purple { background-color: rgba(128, 0, 128, 0.4); }
